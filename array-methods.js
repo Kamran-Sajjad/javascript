@@ -77,7 +77,7 @@
   let sum = arr.reduce((total, value) => {
     return total + value;
   }, 0);
-  console.log("Sum of array is: " + sum);
+  console.log("Sum of array is: ",  sum);
   console.log(sum);
 
   console.log("------------ Example 2: Join letters -------------");
@@ -87,7 +87,7 @@
   let join = letters.reduce((total, value) => {
     return total + value;
   });
-  console.log("Sum of array is: " + join);
+  console.log("Sum of array is: ",  join);
 
 }
 
@@ -100,7 +100,7 @@
   let divisible = arr.find((value) => {
     return value % 3 == 0;
   });
-  console.log("Number divisible by 3 is: " + divisible);
+  console.log("Number divisible by 3 is: ",  divisible);
 
   console.log("------------ Example 2: First letter is A -------------");
   let letters = ["Kamran", "Ali", "zaman"];
@@ -109,7 +109,7 @@
   let first = letters.find((value) => {
     return value[0] == "A" || value[0] == "a";
   });
-  console.log("Name Starting with A/a is: " + first);
+  console.log("Name Starting with A/a is: ",  first);
 }
 
 {
@@ -123,7 +123,7 @@
   let num = arr.findIndex((value) => {
     return value > 100;
   });
-  console.log("Number greater than 100 is at index: " + num);
+  console.log("Number greater than 100 is at index: ",  num);
 
   console.log("------------ Example 2: Find the position of cat -------------");
   let animal = ["dog", "elephant", "cat", "mouse"];
@@ -133,7 +133,7 @@
     return value == "cat";
   });
   console.log(
-    "Cat is at index: " + position + ", and at " + (position + 1) + " Position."
+    "Cat is at index: ", position, ", and at ",  (position + 1), " Position."
   );
 }
 
@@ -148,7 +148,7 @@
   let score = arr.some((value) => {
     return value < 40;
   });
-  console.log("Is there any score than 40: " + score);
+  console.log("Is there any score than 40: ",  score);
 
   console.log(
     "------------ Example 2: Check any word contains letter x -------------"
@@ -173,7 +173,7 @@
   let isEven = arr.every((value) => {
     return value % 2 == 0;
   });
-  console.log("All numbers are even in this array: " + isEven);
+  console.log("All numbers are even in this array: ",  isEven);
 
   console.log(
     "------------ Example 2: Check all names have exactly 4 letters -------------"
@@ -184,6 +184,67 @@
   let letter = animal.every((value) => {
     return value.length==4;
   });
-  console.log("All Names have 4 letters in this array: " + letter);
+  console.log("All Names have 4 letters in this array: ",  letter);
 }
 
+{
+  console.log("------------ concat() -------------");
+  console.log("------------ Example 1: Combine 2 arrays -------------");
+  let arr1 = [1, 2, 3, 4];
+  let arr2 = [5, 6, 7, 8];
+  console.log("Array1 is: ",  arr1);
+  console.log("Array2 is: ",  arr2);
+  let arr = arr1.concat(arr2);
+  console.log("Concatinated Array is: ",  arr);
+}
+
+{
+  console.log("------------ slice() -------------");
+  console.log("------------ Example 1: take items from position 1 to 3 -------------");
+  let arr1 = [10, 20, 30, 40,50];
+  console.log("Orignal Array is: ",  arr1);
+  let arr = arr1.slice(1,3);
+  console.log("Sliced Array is: ",  arr);
+}
+
+{
+  console.log("------------ splice() -------------");
+  console.log(
+    "------------ Example 1: Remove 2 items from position 1 -------------"
+  );
+  let arr1 = [10, 20, 30, 40, 50];
+  console.log("Orignal Array is: ",  arr1);
+  let arr = arr1.splice(1, 2);
+  console.log("Removed values are: ",  arr);
+  console.log("Spliced Array is: ",  arr1);
+}
+
+{
+  console.log("------------ fill() -------------");
+  console.log("------------ Example 1: Fill array with the 'x' -------------");
+  let arr = [1, 2, 3, 4, 5];
+  console.log("Orignal array is:", arr);
+  arr.fill("x");
+  console.log("Array filled with 'x':", arr);
+}
+
+{
+  console.log("------------ flat() -------------");
+  console.log(
+    "---------- Example 1: Remove 1 level of brackets -----------"
+  );
+  const arr = [1, [2, [3]]];
+  const flattenedArray = arr.flat();
+  console.log("Original array:", arr);
+  console.log("Flattened one level:", flattenedArray);
+}
+
+{
+  console.log("------------ flatMap() -------------");
+  console.log("---------- Example 1: flatMap() -----------");
+  const arr = [1, 2, 3];
+  const result = arr.flatMap((num) => [num, num * 2]);
+
+  console.log("Original array:", arr);
+  console.log("After flatMap:", result);
+}
