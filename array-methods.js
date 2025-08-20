@@ -367,6 +367,6 @@
   console.log("---------- Example 1: check {} is array -----------");
   let arr1 = { a: 2 };
   let arr2 = [1, 2, 3];
-  console.log(arr1, "is array:", Array.isArray(arr1));
-  console.log(arr2, "is array:", Array.isArray(arr2));
+  console.log(arr1, "is Array:", Array.isArray(arr1));
+  console.log(arr2, "is Array:", Array.isArray(arr2));
 }
