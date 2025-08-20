@@ -77,7 +77,7 @@
   let sum = arr.reduce((total, value) => {
     return total + value;
   }, 0);
-  console.log("Sum of array is: ",  sum);
+  console.log("Sum of array is: ", sum);
   console.log(sum);
 
   console.log("------------ Example 2: Join letters -------------");
@@ -87,8 +87,7 @@
   let join = letters.reduce((total, value) => {
     return total + value;
   });
-  console.log("Sum of array is: ",  join);
-
+  console.log("Sum of array is: ", join);
 }
 
 {
@@ -100,7 +99,7 @@
   let divisible = arr.find((value) => {
     return value % 3 == 0;
   });
-  console.log("Number divisible by 3 is: ",  divisible);
+  console.log("Number divisible by 3 is: ", divisible);
 
   console.log("------------ Example 2: First letter is A -------------");
   let letters = ["Kamran", "Ali", "zaman"];
@@ -109,7 +108,7 @@
   let first = letters.find((value) => {
     return value[0] == "A" || value[0] == "a";
   });
-  console.log("Name Starting with A/a is: ",  first);
+  console.log("Name Starting with A/a is: ", first);
 }
 
 {
@@ -123,7 +122,7 @@
   let num = arr.findIndex((value) => {
     return value > 100;
   });
-  console.log("Number greater than 100 is at index: ",  num);
+  console.log("Number greater than 100 is at index: ", num);
 
   console.log("------------ Example 2: Find the position of cat -------------");
   let animal = ["dog", "elephant", "cat", "mouse"];
@@ -133,7 +132,11 @@
     return value == "cat";
   });
   console.log(
-    "Cat is at index: ", position, ", and at ",  (position + 1), " Position."
+    "Cat is at index: ",
+    position,
+    ", and at ",
+    position + 1,
+    " Position."
   );
 }
 
@@ -148,7 +151,7 @@
   let score = arr.some((value) => {
     return value < 40;
   });
-  console.log("Is there any score than 40: ",  score);
+  console.log("Is there any score than 40: ", score);
 
   console.log(
     "------------ Example 2: Check any word contains letter x -------------"
@@ -159,7 +162,7 @@
   let letter = animal.some((value) => {
     return value.includes("x");
   });
-  console.log("is any word contains letter 'x': "+letter);
+  console.log("is any word contains letter 'x': " + letter);
 }
 
 {
@@ -173,7 +176,7 @@
   let isEven = arr.every((value) => {
     return value % 2 == 0;
   });
-  console.log("All numbers are even in this array: ",  isEven);
+  console.log("All numbers are even in this array: ", isEven);
 
   console.log(
     "------------ Example 2: Check all names have exactly 4 letters -------------"
@@ -182,9 +185,9 @@
   console.log("Orignal Array is: ");
   console.log(animal);
   let letter = animal.every((value) => {
-    return value.length==4;
+    return value.length == 4;
   });
-  console.log("All Names have 4 letters in this array: ",  letter);
+  console.log("All Names have 4 letters in this array: ", letter);
 }
 
 {
@@ -192,19 +195,21 @@
   console.log("------------ Example 1: Combine 2 arrays -------------");
   let arr1 = [1, 2, 3, 4];
   let arr2 = [5, 6, 7, 8];
-  console.log("Array1 is: ",  arr1);
-  console.log("Array2 is: ",  arr2);
+  console.log("Array1 is: ", arr1);
+  console.log("Array2 is: ", arr2);
   let arr = arr1.concat(arr2);
-  console.log("Concatinated Array is: ",  arr);
+  console.log("Concatinated Array is: ", arr);
 }
 
 {
   console.log("------------ slice() -------------");
-  console.log("------------ Example 1: take items from position 1 to 3 -------------");
-  let arr1 = [10, 20, 30, 40,50];
-  console.log("Orignal Array is: ",  arr1);
-  let arr = arr1.slice(1,3);
-  console.log("Sliced Array is: ",  arr);
+  console.log(
+    "------------ Example 1: take items from position 1 to 3 -------------"
+  );
+  let arr1 = [10, 20, 30, 40, 50];
+  console.log("Orignal Array is: ", arr1);
+  let arr = arr1.slice(1, 3);
+  console.log("Sliced Array is: ", arr);
 }
 
 {
@@ -213,10 +218,10 @@
     "------------ Example 1: Remove 2 items from position 1 -------------"
   );
   let arr1 = [10, 20, 30, 40, 50];
-  console.log("Orignal Array is: ",  arr1);
+  console.log("Orignal Array is: ", arr1);
   let arr = arr1.splice(1, 2);
-  console.log("Removed values are: ",  arr);
-  console.log("Spliced Array is: ",  arr1);
+  console.log("Removed values are: ", arr);
+  console.log("Spliced Array is: ", arr1);
 }
 
 {
@@ -230,9 +235,7 @@
 
 {
   console.log("------------ flat() -------------");
-  console.log(
-    "---------- Example 1: Remove 1 level of brackets -----------"
-  );
+  console.log("---------- Example 1: Remove 1 level of brackets -----------");
   const arr = [1, [2, [3]]];
   const flattenedArray = arr.flat();
   console.log("Original array:", arr);
@@ -241,10 +244,129 @@
 
 {
   console.log("------------ flatMap() -------------");
-  console.log("---------- Example 1: flatMap() -----------");
+  console.log("---------- Example 1: Create flatMap() -----------");
   const arr = [1, 2, 3];
   const result = arr.flatMap((num) => [num, num * 2]);
 
   console.log("Original array:", arr);
   console.log("After flatMap:", result);
+}
+
+{
+  console.log("------------ Sort() -------------");
+  console.log("---------- Example 1: Sort array -----------");
+  let arr = [5, 11, 8, 4, 3];
+  arr.sort((a, b) => a - b);
+  console.log("Sorted array:", arr);
+}
+
+{
+  console.log("------------ Reverse() -------------");
+  console.log("---------- Example 1: Reverse array -----------");
+  let arr = [1, 2, 3, 4, 5];
+  console.log("Orignal array:", arr);
+  arr.reverse();
+  console.log("Reversed array:", arr);
+}
+
+{
+  console.log("------------ includes() -------------");
+  console.log("---------- Example 1: check apple exists in array -----------");
+  let arr = ["banana", "apple", "grapes"];
+  console.log("Orignal array:", arr);
+  let val = arr.includes("apple");
+  console.log("Item found:", val);
+}
+
+{
+  console.log("------------ indexOf() -------------");
+  console.log(
+    "---------- Example 1: check position of 10 in array -----------"
+  );
+  let arr = [5, 9, 10, 4];
+  console.log("Orignal array:", arr);
+  let val = arr.indexOf(10);
+  console.log("Item found at index:", val);
+}
+
+{
+  console.log("------------ lastIndexOf() -------------");
+  console.log(
+    "---------- Example 1: check last position of 10 in array -----------"
+  );
+  let arr = [5, 10, 9, 10, 4, 10, 55];
+  console.log("Orignal array:", arr);
+  let val = arr.lastIndexOf(10);
+  console.log("Last Item found at index:", val);
+}
+
+{
+  console.log("------------ push() -------------");
+  console.log("---------- Example 1: Push 'end' in array -----------");
+  let arr = ["start", "middle"];
+  console.log("Orignal array:", arr);
+  arr.push("end");
+  console.log("Pushed Array :", arr);
+}
+
+{
+  console.log("------------ pop() -------------");
+  console.log(
+    "---------- Example 1: Remove the last item from array -----------"
+  );
+  let arr = [1, 2, 3, 4, 5, 6];
+  console.log("Orignal array:", arr);
+  arr.pop();
+  console.log("Poped Array :", arr);
+}
+
+{
+  console.log("------------ unshift() -------------");
+  console.log(
+    "---------- Example 1: Add 'begin' to thr start of array -----------"
+  );
+  let arr = ["next", "later"];
+  console.log("Orignal array:", arr);
+  arr.unshift("begin");
+  console.log("unshifted Array :", arr);
+}
+
+{
+  console.log("------------ shift() -------------");
+  console.log(
+    "---------- Example 1: Remove the first item of array -----------"
+  );
+  let arr = ["first", "second", "third"];
+  console.log("Orignal array:", arr);
+  arr.shift();
+  console.log("shifted Array :", arr);
+}
+
+{
+  console.log("------------ join() -------------");
+  console.log(
+    "---------- Example 1: combine all item of array into string -----------"
+  );
+  let arr = ["Jan", "Feb", "Mar"];
+  console.log("Orignal array:", arr);
+  let jArr = arr.join("-");
+  console.log("joined string :", jArr);
+}
+
+{
+  console.log("------------ toString() -------------");
+  console.log("---------- Example 1: Turn array into string -----------");
+  let arr = ["Jan", "Feb", "Mar"];
+  console.log("Orignal array:", arr);
+  let jArr = arr.toString();
+  console.log("joined string :", jArr);
+}
+
+{
+  console.log("------------ Array.isArray() -------------");
+  console.log("---------- Example 1: check {} is array -----------");
+  let arr1 = { a: 2 };
+  let arr2 = [1, 2, 3];
+  console.log(arr1, "is array:", Array.isArray(arr1));
+  console.log(arr2, "is array:", Array.isArray(arr2));
 }
